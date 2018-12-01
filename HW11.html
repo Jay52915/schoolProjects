@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		Jasmine Vazquez
+		MW8F
+		<title>function repeat</title>   
+		<script language="javaScript">
+			function repeat(amount)
+				{count=1;
+				while(count<=amount)
+				{document.write("Ouch!<br/>");
+				count=count+1;
+				}
+			}
+			function repeat2(wrd)
+				{count=1;
+				while(count<=10)
+					{document.write(wrd+"<br/>");
+						count=count+1;
+					}
+			}
+			function addItem(x){
+				for (var j = 0;  j<x; j++) {
+					var i = j+1;
+					var ul = document.getElementById("list");
+					var input = document.getElementById("input");
+					var amount2 = document.getElementById("amount2");
+					var li = document.createElement("li");
+					var entry = input.value+" "+i;
+					li.appendChild(document.createTextNode(entry));
+					ul.appendChild(li);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<h1> function repeat</h1>
+		Enter an amount:
+			<input type="text" id="amount"/>
+		<br/>
+			<input type="button" value="press here"
+				onClick="amt=document.getElementById('amount').value;
+				repeat(amt);"/>
+		<br/><br/>Input a phrase:
+			<input type="text" id="phrase"/>
+		<br/>
+			<input type="button" value="press here"
+				onClick="wrd=document.getElementById('phrase').value;
+				repeat2(wrd);"/>
+						<p>Input for a list:</p>
+		<input type="text" id="input"/>
+		<br/>
+
+		<p>Enter an amount:</p>
+		<input type="text" id="amount2"/>		
+		<br/>
+
+		<button onclick="addItem(document.getElementById('amount2').value)"> Add Item </button>
+		<ul id="list"></ul>
+   </body>
+</html>
